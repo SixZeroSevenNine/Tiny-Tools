@@ -1,4 +1,14 @@
 #!/bin/bash
+#  
+# Small script to convert .flac files to mp3 files.
+# Requires flac, metaflac and lame to be installed 
+# on the machine. 
+#
+# Parameters are source path and target path.
+# Script will transfer tags and if it finds a file named
+# folder.jpg, it will be added to the album metadata
+# as album cover.
+#
 find "$1" -name *.flac -print0 | while read -d $'\0' IF
 do
   OF=`echo "$IF" | sed s/\.flac$/.mp3/g | sed s,"$1","$2",g`
