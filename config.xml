@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<config>
+
+  <scanPath>/Path/To/Folders/And/SubFolders/To/Scan</scanPath>
+
+  <database>/Path/To/Scan/Result/database.xml</database>
+
+  <logLevel>INFO</logLevel>
+
+</config>
