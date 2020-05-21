@@ -2,6 +2,13 @@
 
 Tiny nodejs script that parses virt-top output and converts it into InfluxDB format, file is dumped in /tmp directory and can be read by telegraf. Requires virt-top.
 
+Telegraf configuration snippet:
+```
+[[inputs.file]]
+  files = ["/tmp/telegraf-virt-top.influxdb"]
+  data_format = "influx"
+```
+
 ## **Example output of virt-top**:
 ```
 Hostname,Time,Arch,Physical CPUs,Count,Running,Blocked,Paused,Shutdown,Shutoff,Crashed,Active,Inactive,%CPU,Total hardware memory (KB),Total memory (KB),Total guest memory (KB),Total CPU time (ns),Domain ID,Domain name,CPU (ns),%CPU,Mem (bytes),%Mem,Block RDRQ,Block WRRQ,Net RXBY,Net TXBY
